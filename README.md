@@ -38,3 +38,35 @@ this matcher comes from Jest-DOM
 
 matcher argument:
 \*refines matcher
+
+ASSERTIONS PATTERNS EXAMPLE
+
+expect(element.textContent).toBe('hello');
+expect(elementsArray).toHaveLength(7);
+
+JEST-DOM
+comes with create-react-app
+
+uses
+src/setupTests.js imports it before each test, makes matchers available
+DOM-based matchers
+-toBeVisible() or toBeChecked()
+
+JEST HOW IT WORKS AND HOW WE NEED IT
+React Testing Library Helps with
+-Rendering components into Virtual DOM
+-serching virtual DOM
+-interacting with virtual DOM
+Needs a Test Runner
+-find tests run them and make assertions
+Jest
+-is recommended by Testign Library
+-comes with create-react-app
+
+npm test runs an npm script that runs Jest in watch mode
+
+JEST Watch Mode
+Watch for changes in files since last commit
+Only Run tests related to these files
+No Changes? No Tests
+-Type a to run all tests
