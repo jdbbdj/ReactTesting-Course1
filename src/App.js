@@ -19,10 +19,13 @@ function App() {
       <button onClick={handleClick} disabled={buttonDisable} style={{backgroundColor:buttonColor}}>Test {newButtonName}</button>
       <input 
         type="checkbox"
-        id="enable-button-checkbox"
+        id="disable-button-checkbox"
         defaultChecked={buttonDisable}
         aria-checked={buttonDisable}
         onChange={(e)=>setButtonDisable(e.target.checked)}/>
+        <label htmlFor="disable-button-checkbox">
+          Disable Button
+        </label>
     </div>
   );
 }

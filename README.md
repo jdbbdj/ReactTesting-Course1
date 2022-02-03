@@ -167,3 +167,6 @@ TESTING ASYNC FUNCTIONALITY REACT TESTING
 IS IT OKAY TO HAVE MULTIPLE ASSERTIONS ON A SINGLE TEST?
 
 PREFERRABLY NO
+
+IF THERE's A LOT OF CHECKBOXES AND getByRole isn't a good choice to use you can simply put a label on it
+and call the label to distinguish the checkboxes
