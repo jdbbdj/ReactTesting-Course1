@@ -129,3 +129,41 @@ Testing Library encourages testing behavior over implementation? So why TDD inst
 Actually BDD is very implicitly defined needs a lot of resources(Devs,QA,etc) that needs process for different groups to interact
 
 ----------------------------------------ACCESSIBILITY AND FINDING ELEMENTS-----------------------------------------------------------------
+source: https://testing-library.com/docs/guide-which-query/
+
+|QUERIES ACCESSIBLE TO EVERYONE:
+-is for people has access on mouse/or visually or assistive technology
+
+getByRole i.e. buttons heading
+
+getByLabelText
+getPlaceholderText
+getByDisplayValue
+
+|Semantic QUeries
+getByAltText
+getByTitle
+
+|Test IDs: for last resort
+only to be used if entirely necessary
+
+sometimes you can use some accessibility in other way around depending on its efficiency
+
+Roles documentation: https://www.w3.org/TR/wai-aria/#role_definitions
+some elements have built-in roles: button, a(link)
+
+If you can't find an element like a screen reader would?
+App isn't friendly to screen readers
+
+-----------------------------------------------COURSE PLAN----------------------------------------------------
+CHANGEING BUTTON COLOR, DISABLING BUTTON WITH CHECKBOX
+INTRODUCE: TESTING INTERACTIONS THAT AFFECT DOM, unit testing functions
+FUTURE SECTIONS: BUILD UP TO MORE COMPLEX FUNCTIONALITY AND TESTS
+TESTING MORE COMPLEX USER INTERACTIONS<>INTERACTIONS BETWEEN COMPONENTS
+MOCKING SERVER RESPONSES WITH MOCK SERVER WORKER
+TESTING ASYNC FUNCTIONALITY REACT TESTING
+
+-----------------------------------NOTES-----------------------------------------------------------------------
+IS IT OKAY TO HAVE MULTIPLE ASSERTIONS ON A SINGLE TEST?
+
+PREFERRABLY NO
