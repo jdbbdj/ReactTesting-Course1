@@ -1,70 +1,40 @@
-# Getting Started with Create React App
+render
+\*Create vitual DOM for argument JSX
+\*Access virtual DOM via screen global
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The render wil create virtual DOM for the JSX Component named App.jsx
 
-## Available Scripts
+After it has been rendered it can be accessed through "SCREEN" from
+react testing library
+import {render, screen} from '@testing-ibrary/react';
 
-In the project directory, you can run:
+screen.getByText(/string/);
+that string will be searched in the VIRTUAL DOM
+notes:
+getByText is for regular expression
+for case sensitive(i)
+could be any string
 
-### `npm start`
+after using the function of screen there is a part called Assertion
+that causes the test to SUCCEED OR FAIL
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+JEST ASSERTIONS
+These assertions determines the test passess or fails
+Central part of testing
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+PIECES OF ASSERTIONS
+expect(argument).matcher();
 
-### `npm test`
+expect:
+expect() -> Jest global, starts the assertion
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+expect argument:
+expect(argument).toBeIntheDocument
+subject of the assertion->this is what the jest will examine
 
-### `npm run build`
+expect(argument).matcher(matcher-argument):
+type of assertion
+this matcher comes from Jest-DOM
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+matcher argument:
+\*refines matcher
