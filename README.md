@@ -170,3 +170,14 @@ PREFERRABLY NO
 
 IF THERE's A LOT OF CHECKBOXES AND getByRole isn't a good choice to use you can simply put a label on it
 and call the label to distinguish the checkboxes
+
+---------------------------UNIT TESTING FUNCTIONS------------------------------------------------------------
+|Functions seperate from components
+-Used by several components
+-Complex logic
+|Unit Test if
+-Complex logic difficult to test via functional tests
+-Too many edge cases
+
+DESCRIBE STATEMENTS
+-A way of combining test cases

@@ -1,5 +1,13 @@
 import {useState} from 'react';
 import './App.css';
+import Test from './test';
+
+
+export const replaceCamelWithSpaces = (colorName) => {
+  return colorName.replace(/\B([A-Z])\B/g,' $1');
+};
+
+
 
 function App() {
 
@@ -16,7 +24,7 @@ function App() {
 
   return (
     <div className="App">
-      <button onClick={handleClick} disabled={buttonDisable} style={{backgroundColor:buttonColor}}>Test {newButtonName}</button>
+      <button onClick={handleClick} disabled={buttonDisable} style={{backgroundColor:buttonDisable?'gray':buttonColor}}>Test {newButtonName}</button>
       <input 
         type="checkbox"
         id="disable-button-checkbox"
@@ -26,6 +34,7 @@ function App() {
         <label htmlFor="disable-button-checkbox">
           Disable Button
         </label>
+        <Test/>
     </div>
   );
 }
