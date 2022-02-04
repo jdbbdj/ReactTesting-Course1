@@ -181,3 +181,11 @@ and call the label to distinguish the checkboxes
 
 DESCRIBE STATEMENTS
 -A way of combining test cases
+
+WHEN TO UNIT TEST?
+-replaceCamelWithSpaces is pretty simple
+-could be covered by functional tests on button
+
+For more complicated functions, unit tests help with:
+covering all possible edge cases
+determining what caused the functional tests to fail

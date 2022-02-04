@@ -5,29 +5,29 @@ import {replaceCamelWithSpaces} from './App';
 test('button has correct initial color', () => {
   render(<App/>);
   //check if the button has the right name and role
-  const screenRole = screen.getByRole('button',{name:'Test red'});
+  const screenRole = screen.getByRole('button',{name:'Test Medium Violet Red'});
   
   //expect the background color to be red
-  expect(screenRole).toHaveStyle({backgroundColor:'red'});
+  expect(screenRole).toHaveStyle({backgroundColor:'MediumVioletRed'});
 
   const screenRoleCheckBox = screen.getByRole('checkbox',{name:'Disable Button'});
   expect(screenRoleCheckBox).not.toBeChecked();
-  expect(screenRole).toHaveStyle({backgroundColor:'red'});
+  expect(screenRole).toHaveStyle({backgroundColor:'MediumVioletRed'});
 });
 
 test('button turns blue after click', () => {
   render(<App/>);
   //check if the button has the right name and role
-  const screenRole = screen.getByRole('button',{name:'Test red'});
+  const screenRole = screen.getByRole('button',{name:'Test Medium Violet Red'});
   //expect the click button to have right result
   fireEvent.click(screenRole);
 
   //expect the bacground color to be blue
-  expect(screenRole).toHaveStyle({backgroundColor:'blue'});
-  expect(screenRole.textContent).toBe('Test blue');
+  expect(screenRole).toHaveStyle({backgroundColor:'MidnightBlue'});
+  expect(screenRole.textContent).toBe('Test Midnight wBlue');
   const screenRoleCheckBox = screen.getByRole('checkbox',{name:'Disable Button'});
   expect(screenRoleCheckBox).not.toBeChecked();
-  expect(screenRole).toHaveStyle({backgroundColor:'blue'});
+  expect(screenRole).toHaveStyle({backgroundColor:'MidnightBlue'});
   
 });
 
@@ -46,7 +46,7 @@ test('after check conditions',()=>{
   const screenRoleCheckBox = screen.getByRole('checkbox',{name:'Disable Button'});
   fireEvent.click(screenRoleCheckBox);
   //check that the button starts out enabled
-  const screenRole = screen.getByRole('button',{name:'Test red'});
+  const screenRole = screen.getByRole('button',{name:'Test Medium Violet Red'});
   expect(screenRole).toBeDisabled();
   expect(screenRole).toHaveStyle({backgroundColor:'gray'});
   //check that the checkbox starts out unchecked
